@@ -1,0 +1,4 @@
+venv
+lr2-xml/*
+!lr2-xml/.gitkeep
+.idea
