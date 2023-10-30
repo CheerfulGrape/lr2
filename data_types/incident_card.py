@@ -7,6 +7,17 @@ from data_types.host import Host
 
 @dataclass
 class IncidentCard:
+    """
+    IncidentCard is a class containing all the information about the incident
+    :ivar name incident name
+    :ivar type_name type of incident
+    :ivar event_count number of events, related to incident
+    :ivar critical_rating critical rating
+    :ivar vulnerabilities list of vulnerabilities
+    :ivar hosts list of hosts
+    :ivar start_date start date
+    :ivar end_date end date
+    """
     name: str
     type_name: str
     event_count: int

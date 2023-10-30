@@ -5,7 +5,13 @@ from sqlalchemy import create_engine, text
 from data_types.incident_card import IncidentCard
 
 
-def get_incident_from_db(incident_id: str = '231830') -> (IncidentCard, list[int], list[int]):
+def get_incident_from_db(incident_id) -> (IncidentCard, list[int], list[int]):
+    """
+    Get base info from DB and ids, that can be used for further info aggregation
+    :param incident_id: id of an incident
+    :return: tuple of IncidentCard object without vulnerabilities and hosts info; relevant asset ids; relevant vulnerability ids
+    """
+
     username = os.getenv('DB_USERNAME')
     password = os.getenv('DB_PASSWORD')
     host = os.getenv('DB_URL')

@@ -6,7 +6,8 @@ from data_types.report import Report, Host, Vulnerability
 
 
 def parse_xml_report_file(path: str) -> Report:
-    """ Parses XML report file and produces a Report object
+    """
+    Parse XML report file and produces a Report object
     :param path: path to xml file
     :return: report object of type Report
     """
