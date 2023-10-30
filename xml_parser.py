@@ -9,6 +9,7 @@ def parse_xml_report_file(path: str) -> Report:
     """
     Parse XML report file and produces a Report object
     :param path: path to xml file
+    :raises RuntimeError on invalid xml format
     :return: report object of type Report
     """
     if not os.path.exists(path) or os.path.splitext(path)[1] != '.xml':
